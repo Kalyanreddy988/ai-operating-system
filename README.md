@@ -48,10 +48,11 @@ Backend (FastAPI)
         ├── LLM Explanation Generator
         └── Model Storage & Download
 
-
+```
 ---
 
 ## 📂 Project Structure
+
 ```
 ai_os/
 ├── app/
@@ -89,7 +90,7 @@ ai_os/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-
+```
 
 ---
 
