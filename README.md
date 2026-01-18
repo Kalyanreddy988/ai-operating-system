@@ -34,6 +34,7 @@ An end-to-end **AutoML-powered AI Operating System** that allows users to upload
 ---
 
 ## 🏗️ System Architecture
+```
 Frontend (React + Vite)
         |
         |  HTTP (REST API)
@@ -51,7 +52,7 @@ Backend (FastAPI)
 ---
 
 ## 📂 Project Structure
-
+```
 ai_os/
 ├── app/
 │   ├── main.py
