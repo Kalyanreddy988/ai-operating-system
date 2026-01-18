@@ -34,19 +34,19 @@ An end-to-end **AutoML-powered AI Operating System** that allows users to upload
 ---
 
 ## 🏗️ System Architecture
-
 Frontend (React + Vite)
-|
-| HTTP (REST API)
-↓
+        |
+        |  HTTP (REST API)
+        v
 Backend (FastAPI)
-|
-├── Data Loader
-├── AutoML Engine
-├── Model Trainer
-├── Evaluator
-├── LLM Explanation Generator
-└── Model Storage & Download
+        |
+        ├── Data Loader
+        ├── AutoML Engine
+        ├── Model Trainer
+        ├── Evaluator
+        ├── LLM Explanation Generator
+        └── Model Storage & Download
+
 
 ---
 
@@ -54,40 +54,41 @@ Backend (FastAPI)
 
 ai_os/
 ├── app/
-│ ├── main.py
-│ ├── controller.py
-│ ├── agents/
-│ │ ├── executor.py
-│ │ ├── planner.py
-│ │ └── memory.py
-│ ├── tools/
-│ │ ├── datatools.py
-│ │ ├── mltools.py
-│ │ └── model_selector.py
-│ └── core/
-│ ├── llm_client.py
-│ └── config.py
+│   ├── main.py
+│   ├── controller.py
+│   ├── agents/
+│   │   ├── executor.py
+│   │   ├── planner.py
+│   │   └── memory.py
+│   ├── tools/
+│   │   ├── datatools.py
+│   │   ├── mltools.py
+│   │   └── model_selector.py
+│   └── core/
+│       ├── llm_client.py
+│       └── config.py
 │
 ├── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ │ ├── TaskForm.jsx
-│ │ │ ├── FileUpload.jsx
-│ │ │ └── AIBackground.jsx
-│ │ ├── services/
-│ │ │ └── api.js
-│ │ ├── App.jsx
-│ │ ├── main.jsx
-│ │ └── index.css
-│ ├── public/
-│ ├── package.json
-│ └── vite.config.js
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── TaskForm.jsx
+│   │   │   ├── FileUpload.jsx
+│   │   │   └── AIBackground.jsx
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
 │
 ├── saved_models/
 ├── uploads/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+
 
 ---
 
