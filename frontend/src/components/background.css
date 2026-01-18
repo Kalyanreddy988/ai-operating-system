@@ -1,0 +1,20 @@
+.ai-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 20% 20%, #2b5cff55, transparent 40%),
+    radial-gradient(circle at 80% 30%, #9b5cff44, transparent 40%),
+    radial-gradient(circle at 50% 80%, #35c6ff44, transparent 40%),
+    linear-gradient(120deg, #050816, #0b102a);
+  animation: pulse 6s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    filter: brightness(1);
+  }
+  to {
+    filter: brightness(1.25);
+  }
+}

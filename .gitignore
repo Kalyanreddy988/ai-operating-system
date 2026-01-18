@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+
+# Environment variables
+.env
+
+# Uploaded files
+uploads/
+
+# Saved ML models (optional – comment if you want them)
+saved_models/
+model.pkl
+
+# Node
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
