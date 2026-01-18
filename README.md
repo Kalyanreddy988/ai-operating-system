@@ -53,26 +53,38 @@ Backend (FastAPI)
 ## 📂 Project Structure
 
 ai_os/
-│
-├── app/ # Backend (FastAPI)
-│ ├── main.py # API entry point
+├── app/
+│ ├── main.py
+│ ├── controller.py
 │ ├── agents/
-│ │ └── executor.py # Orchestrates ML workflow
+│ │ ├── executor.py
+│ │ ├── planner.py
+│ │ └── memory.py
 │ ├── tools/
-│ │ ├── datatools.py # CSV loading & preprocessing
-│ │ └── mltools.py # AutoML logic
-│ ├── saved_models/ # Stored trained models
-│ └── core/ # Configs & schemas
+│ │ ├── datatools.py
+│ │ ├── mltools.py
+│ │ └── model_selector.py
+│ └── core/
+│ ├── llm_client.py
+│ └── config.py
 │
-├── frontend/ # Frontend (React + Vite)
+├── frontend/
 │ ├── src/
 │ │ ├── components/
-│ │ │ └── TaskForm.jsx
+│ │ │ ├── TaskForm.jsx
+│ │ │ ├── FileUpload.jsx
+│ │ │ └── AIBackground.jsx
+│ │ ├── services/
+│ │ │ └── api.js
 │ │ ├── App.jsx
 │ │ ├── main.jsx
 │ │ └── index.css
-│ └── package.json
+│ ├── public/
+│ ├── package.json
+│ └── vite.config.js
 │
+├── saved_models/
+├── uploads/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
@@ -109,7 +121,7 @@ uvicorn app.main:app --reload
 Backend runs at:
 http://127.0.0.1:8000
 
-2️⃣ Frontend Setup
+### 2️⃣ Frontend Setup
 cd frontend
 npm install
 npm run dev
