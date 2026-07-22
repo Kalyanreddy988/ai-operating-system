@@ -1,18 +1,20 @@
+const API_URL = "http://127.0.0.1:8000";
+
 export async function runTask(goal, file) {
-  const formData = new FormData();
-  formData.append("files", file);
+    const formData = new FormData();
 
-  const response = await fetch(
-    `http://127.0.0.1:8000/run-task?user_goal=${encodeURIComponent(goal)}`,
-    {
-      method: "POST",
-      body: formData,
+    formData.append("goal", goal);
+    formData.append("file", file);
+
+    const response = await fetch(`${API_URL}/upload`, {
+        method: "POST",
+        body: formData,
+    });
+
+    if (!response.ok) {
+        const error = await response.text();
+        throw new Error(error);
     }
-  );
 
-  if (!response.ok) {
-    throw new Error("Backend error");
-  }
-
-  return await response.json();
+    return await response.json();
 }

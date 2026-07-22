@@ -1,10 +1,5 @@
-import TaskForm from "./components/TaskForm";
-import "./index.css";
+import Home from "./pages/Home";
 
 export default function App() {
-  return (
-    <div className="app-root">
-      <TaskForm />
-    </div>
-  );
+  return <Home />;
 }
